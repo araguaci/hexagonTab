@@ -1,6 +1,6 @@
 export const version = {};
 
-version.number = '4.0.0';
+version.number = '4.1.0';
 
 version.name = 'Magnificent Nightingale';
 
@@ -18,21 +18,21 @@ version.compare = (a, b) => {
 
     if (na > nb) {
       return 1;
-    };
+    }
 
     if (nb > na) {
       return -1;
-    };
+    }
 
     if (!isNaN(na) && isNaN(nb)) {
       return 1;
-    };
+    }
 
     if (isNaN(na) && !isNaN(nb)) {
       return -1;
-    };
+    }
 
-  };
+  }
 
   return 0;
 };

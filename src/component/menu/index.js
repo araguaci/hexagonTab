@@ -1,30 +1,20 @@
 import { state } from '../state';
-import { data } from '../data';
-import { form } from '../form';
-import { bookmark } from '../bookmark';
-import { theme } from '../theme';
-import { appName } from '../appName';
+import { APP_NAME } from '../../constant';
 
-import { Button } from '../button';
 import { MenuFrame } from '../menuFrame';
-import { MenuNav } from '../menuNav';
-import { Shade } from '../shade';
-
-import { node } from '../../utility/node';
-import { clearChildNode } from '../../utility/clearChildNode';
 
 const menu = {};
 
 menu.navData = [
-  // { name: 'Debug', active: true, overscroll: true, sub: ['Input', 'Button', 'Bookmark', 'Icon'] },
-  { name: 'Theme', active: true, overscroll: true, sub: ['Preset', 'Saved', 'Style', 'Colour', 'Accent', 'Font', 'Shade', 'Opacity', 'Background', 'Bookmark'] },
-  { name: 'Layout', active: false, overscroll: true, sub: ['Scaling', 'Grid'] },
-  { name: 'Bookmark', active: false, overscroll: true, sub: ['General', 'Hover', 'Shadow'] },
-  { name: 'Toolbar', active: false, overscroll: true, sub: ['Size', 'Position', 'Controls'] },
-  { name: 'Data', active: false, overscroll: true, sub: ['Restore', 'Backup', 'Clear'] },
-  { name: 'Support', active: false, overscroll: false },
-  { name: 'Coffee', active: false, overscroll: false },
-  { name: appName, active: false, overscroll: false }
+  // { name: 'Debug', id: 'debug', active: true, overscroll: true, sub: ['Input', 'Button', 'Bookmark', 'Icon'] },
+  { name: 'Theme', id: 'theme', active: true, overscroll: true, sub: ['Preset', 'Saved', 'Style', 'Colour', 'Accent', 'Font', 'Shade', 'Opacity', 'Background', 'Bookmark'] },
+  { name: 'Layout', id: 'layout', active: false, overscroll: true, sub: ['Scaling', 'Grid'] },
+  { name: 'Bookmark', id: 'bookmark', active: false, overscroll: true, sub: ['General', 'Hover', 'Shadow'] },
+  { name: 'Toolbar', id: 'toolbar', active: false, overscroll: true, sub: ['Size', 'Position', 'Controls'] },
+  { name: 'Data', id: 'data', active: false, overscroll: true, sub: ['Restore', 'Backup', 'Clear'] },
+  { name: 'Support', id: 'support', active: false, overscroll: false },
+  { name: 'Coffee', id: 'coffee', active: false, overscroll: false },
+  { name: APP_NAME, id: 'app', active: false, overscroll: false }
 ];
 
 menu.mod = {};
@@ -43,7 +33,7 @@ menu.open = (name) => {
 
     menu.element.frame.menuNav.state.toggle(name);
 
-  };
+  }
 
   menu.element.frame.open();
 
@@ -53,7 +43,7 @@ menu.close = () => {
 
   if (menu.element.frame) {
     menu.element.frame.close();
-  };
+  }
 
 };
 
@@ -63,7 +53,7 @@ menu.toggle = () => {
     menu.close();
   } else {
     menu.open();
-  };
+  }
 
 };
 

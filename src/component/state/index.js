@@ -62,7 +62,7 @@ state.minMax = {
     size: { min: 10, max: 200 },
     column: { min: 1, max: 20 },
     gap: { min: 0, max: 300 },
-    perspective: { min: 30, max: 400 },
+    perspective: { min: 20, max: 1000 },
     transform: {
       focus: { min: 0, max: 200 },
       rotate: {
@@ -155,11 +155,11 @@ state.option = {
 };
 
 state.get = {
-  current: () => { return state.current },
-  default: () => { return JSON.parse(JSON.stringify(state.default)) },
-  minMax: () => { return JSON.parse(JSON.stringify(state.minMax)) },
-  step: () => { return JSON.parse(JSON.stringify(state.step)) },
-  option: () => { return JSON.parse(JSON.stringify(state.option)) }
+  current: () => { return state.current; },
+  default: () => { return JSON.parse(JSON.stringify(state.default)); },
+  minMax: () => { return JSON.parse(JSON.stringify(state.minMax)); },
+  step: () => { return JSON.parse(JSON.stringify(state.step)); },
+  option: () => { return JSON.parse(JSON.stringify(state.option)); }
 };
 
 state.set = {
